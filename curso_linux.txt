@@ -219,6 +219,10 @@ chmod a=rwx: Concedendo todas as permissões a todos
 chmos g-w: Remover permissão de rescrever para grupos
 chmod u+rw: Concedendo permissão dono do arquivo leitura e escrita
 
+Alterando um Proprietário do arquivo
+
+
+
 
 
 

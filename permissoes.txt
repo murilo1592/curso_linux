@@ -1,0 +1,60 @@
+Gerenciamento de Permissões
+
+Possibilidade de alterar 3 propriedades de arquivos e diretórios
+
+Leitura: Se os usuários poderão ler o arquivo (R - read)
+Escrita: Se os usuários poderão escrever no arquivo (W - write)
+Execução: Se os usuários poderão executar o arquivo (X - execute)
+
+1 222 333 444
+
+1: diretório ou arquivo
+222: Permissões do owner (dono)
+333: Permissões do grupo (que o arquivo pertence)
+444: Permissões dos demais usuários (que não são donos do arquivo e também não fazem parte do grupo do arquivo)
+
+Alterar Permissão de Forma Númerica
+comando: chmod xxx file/dir (Onde 'x' representa as permissões em números)
+0: Sem permissão ---
+1: Executar --x
+2: Escrever -w-
+3: Ler e Executar -wx
+4: Ler r--
+5: Ler e executar r-x
+6: Ler e escrever rw
+7: Ler, escrever e executar rwx
+
+Exemplos - modo numérico
+
+chmod 777 arquivo: Todos tem todas as permissões
+chmod 400 arquivo: Só o dono tem permissão de leitura
+chmod 764 arquivo: Dono todas as permissões, grupo pode ler e alterar e demais só ler
+chmod 755 arquivo: Dono todas as permissões, grupo e demais só ler e executar
+chmod 000 arquivo: Ninguém tem mais permissão, apenas com sudo ou root
+chmod 744 arquivo: Dono tem toda as permissões, demais apenas leitura
+
+Alterar Permissões de Modo Simbólico
+comando: chmod args fila/dir (Onde 'args' representado por)
++: Adiciona permissão a um arquivo ou diretório
+-: Remove permissão a um arquivo ou diretório
+=: Determina as permissões, substituindo as anteriores
+u: Dono do arquivo
+g: Grupo
+o: Outros
+a: todos
+
+Exemplos - modo simbólico
+
+chmod o=x: Concedendo permissão de executar para outros
+chmod a=rwx: Concedendo todas as permissões a todos
+chmos g-w: Remover permissão de rescrever para grupos
+chmod u+rw: Concedendo permissão dono do arquivo leitura e escrita
+
+Alterando um Proprietário do arquivo
+comando: sudo chown camila arquivo
+
+Alterando proprietário e grupo de um arquivo
+comando: sudo chown camila:camila arquivo
+
+Alterando o grupo de um arquivo
+comando: sudo chgrp camila arquivo

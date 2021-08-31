@@ -6,3 +6,7 @@ Ex: cp -r downloads/* arquivos_salvos
 
 Mover todos os arquivos de um diretório p/ o outro
 Ex: mv * /home/murilo/downloads/imagens /home/murilo/imagens/site6
+
+Copiar e Colar no Terminal
+
+comando: copiar: ctrl shift c e colar: ctrl shift v
