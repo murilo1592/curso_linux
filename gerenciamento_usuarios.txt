@@ -1,0 +1,43 @@
+Gerenciamentos de Usuários e Grupos
+
+Listar usuários
+comando: ls ~/home
+
+Criar usuário
+comando: sudo adduser camila
+
+Deletar usuário
+comando: sudo userdel --remove camila
+
+Modificar nomes dos display
+comando: sudo usermod -c 'camila' roberta
+
+Modificar nome do usuário e diretório
+comando: sudo usermod -l roberta -d /home/roberta -m camila
+
+Desabilitar usuário
+comando: sudo usermod -L roberta
+
+Habilitar usuário
+comando: sudo usermod -U roberta
+
+Listar grupos
+comando: getent group
+
+Listar grupo por nome
+comando: groups devs
+
+Criar grupos de usuŕios
+comando: sudo groupadd -g 9999 devs
+
+Deletar grupos de usuários
+comando: sudo groupdel devs
+
+Adicionar usuários a um grupo
+comando: sudo usermod -a -G devs roberta
+
+Remover usuário de um grupo
+comando: sudo gpasswd -d roberta devs
+
+Mudar senha do usuaŕio atual
+comando: passwd

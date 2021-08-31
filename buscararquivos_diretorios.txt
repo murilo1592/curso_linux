@@ -1,0 +1,81 @@
+Buscar em Arquivos e Diretórios
+
+Listando Início do arquivo
+comando: head documento.txt
+
+Listar primeira linha do arquivo
+comando: head -n 1 documento.txt
+
+Copiar linha de um documento para outro
+comando:head -n 1 documento.txt > documento2.txt
+
+Listar o final do arquivo
+comando: tail documento.txt
+
+Limitar linhas a aprecer no final do arquivo
+comando: tail -n 1 documento.txt
+
+Copiar última linha de um arquivo para outro
+comando: tail -n 1 documento.txt > documento2.txt
+
+Salvar logs de um arquivo
+comando: tail -f documento.txt ( sair ctrl + c)
+
+Encontar Textos
+comando: grep 'palavra' documento.tx ( AS PALAVRAS SÃO MARCADAS EM VERMELHO E NÃO DIFERENCIA LETRAS MAIÚSCULAS )
+
+Mostrar quantas vezes a palavra existe no arquivo
+comando: grep -c 'palavara'
+
+Encontrar palavras em diretórios ( ONDE OS DIRETÓRISO ESTEJAM NA MESMA RAÍZ ONDE  O COMANDO É EXECUTADO )
+comando: grep 'palavra' -r
+
+Encontrar arquivos ou diretórios ( -iname ignora letras maiúsculas )
+comando: find -iname 'documento.txt'
+
+Encontrar arquivos ou diretórios que começam com uma determinada palavra
+comando: find -iname 'documento*'
+
+Procurar diretórios ou arquivos vazios ( BUSCA DIRETÓRIOS VAZIO NA RAÍZ ONDE O COMANDO É EXECUTADO )
+comando: find -empty
+
+Procurar arquivos vazios
+comando: find -empty -type f
+
+Procurar diretórios vazios
+comando: find -empty -type d
+
+Comando Locate ( BUSCA DADOS EM TODO O SISTEMA OPERACIONAL, ARQUIVOS NOVOS PODEM NÃO SER ENCONTRADOS POR ESSE COMANDO )
+comando: locate documento.txt
+
+Executar último comando digitado
+comando: !!
+
+Mostrar de onde o comando está sendo executado
+comando: which ls
+
+Editores de Textos
+VIM e NANO
+
+Instalar editor de texto
+comando: sudo apt install nano ( OU OUTRO EDITOR )
+
+Copiar dados de um arquivo com Nano
+comandos:
+        copiar: alt a ( selecionar texto ) alt 6 ( marcar texto selecionado )
+        colar: ctrl u
+
+        recortar: alt a ( selecionar texto ) ctrl k ( recortar texto selecionado )
+        colar: ctrl u
+
+Ir para o fim do arquivo com nano
+comando: alt /
+
+Ir para o topo do arquivo com nano
+comando: alt \
+
+Ir para determinada linha com nano
+comando: alt g ( digite o número da linha )
+
+Buscar palavras em editor nano
+comando: ctrl w ( digite a palavra ou sentença )

@@ -1,0 +1,25 @@
+Gerenciamento de Pacotes
+
+Atualizar Repostórios
+comando: sudo apt update
+
+Atualizar Pacotes e Aplicativos
+comando: sudp apt upgrade
+
+Listando Pacotes e Aplicativos Ocultos
+comandos: ls -la
+
+Instalar Pacotes e Aplicativos
+comando: sudo apt install 'nome_pacote'
+
+Deletar Pacote ou Aplicativo
+comando: sudo apt purge 'nome_pacote'
+
+Atualizar o Linux
+comando: sudo apt dist-upgrade
+
+Limpando Pacotes e Aplicativos Desnecessários ( App e Pacotes que não estão sendo utilizados )
+comando: sudo apt autoremove
+
+Buscando Pacotes e Aplicativos
+comando: sudo apt-cache search 'nome'

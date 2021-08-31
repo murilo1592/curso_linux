@@ -1,0 +1,8 @@
+Copiar um diretório p/ outro diretório
+Ex: cp -r downloads arquivos_salvos
+
+Copiar toda a estrutura de um diretório p/ o outro
+Ex: cp -r downloads/* arquivos_salvos
+
+Mover todos os arquivos de um diretório p/ o outro
+Ex: mv * /home/murilo/downloads/imagens /home/murilo/imagens/site6

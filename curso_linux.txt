@@ -1,0 +1,229 @@
+Copiar um diretório p/ outro diretório
+Ex: cp -r downloads arquivos_salvos
+
+Copiar toda a estrutura de um diretório p/ o outro
+Ex: cp -r downloads/* arquivos_salvos
+
+Mover todos os arquivos de um diretório p/ o outro
+Ex: mv * /home/murilo/downloads/imagens /home/murilo/imagens/site6
+
+/***************************************************/
+
+Gerenciamento de Pacotes
+
+Atualizar Repostórios
+comando: sudo apt update
+
+Atualizar Pacotes e Aplicativos
+comando: sudp apt upgrade
+
+Listando Pacotes e Aplicativos Ocultos
+comandos: ls -la
+
+Instalar Pacotes e Aplicativos
+comando: sudo apt install 'nome_pacote'
+
+Deletar Pacote ou Aplicativo
+comando: sudo apt purge 'nome_pacote'
+
+Atualizar o Linux
+comando: sudo apt dist-upgrade
+
+Limpando Pacotes e Aplicativos Desnecessários ( App e Pacotes que não estão sendo utilizados )
+comando: sudo apt autoremove
+
+Buscando Pacotes e Aplicativos
+comando: sudo apt-cache search 'nome'
+
+
+/***************************************************************************************************************/
+Buscar em Arquivos e Diretórios
+
+Listando Início do arquivo
+comando: head documento.txt
+
+Listar primeira linha do arquivo
+comando: head -n 1 documento.txt
+
+Copiar linha de um documento para outro
+comando:head -n 1 documento.txt > documento2.txt
+
+Listar o final do arquivo
+comando: tail documento.txt
+
+Limitar linhas a aprecer no final do arquivo
+comando: tail -n 1 documento.txt
+
+Copiar última linha de um arquivo para outro
+comando: tail -n 1 documento.txt > documento2.txt
+
+Salvar logs de um arquivo
+comando: tail -f documento.txt ( sair ctrl + c)
+
+Encontar Textos
+comando: grep 'palavra' documento.tx ( AS PALAVRAS SÃO MARCADAS EM VERMELHO E NÃO DIFERENCIA LETRAS MAIÚSCULAS )
+
+Mostrar quantas vezes a palavra existe no arquivo
+comando: grep -c 'palavara'
+
+Encontrar palavras em diretórios ( ONDE OS DIRETÓRISO ESTEJAM NA MESMA RAÍZ ONDE  O COMANDO É EXECUTADO )
+comando: grep 'palavra' -r
+
+Encontrar arquivos ou diretórios ( -iname ignora letras maiúsculas )
+comando: find -iname 'documento.txt'
+
+Encontrar arquivos ou diretórios que começam com uma determinada palavra
+comando: find -iname 'documento*'
+
+Procurar diretórios ou arquivos vazios ( BUSCA DIRETÓRIOS VAZIO NA RAÍZ ONDE O COMANDO É EXECUTADO )
+comando: find -empty
+
+Procurar arquivos vazios
+comando: find -empty -type f
+
+Procurar diretórios vazios
+comando: find -empty -type d
+
+Comando Locate ( BUSCA DADOS EM TODO O SISTEMA OPERACIONAL, ARQUIVOS NOVOS PODEM NÃO SER ENCONTRADOS POR ESSE COMANDO )
+comando: locate documento.txt
+
+Executar último comando digitado
+comando: !!
+
+Mostrar de onde o comando está sendo executado
+comando: which ls
+
+Editores de Textos
+VIM e NANO
+
+Instalar editor de texto
+comando: sudo apt install nano ( OU OUTRO EDITOR )
+
+Copiar dados de um arquivo com Nano
+comandos: 
+	copiar: alt a ( selecionar texto ) alt 6 ( marcar texto selecionado )
+	colar: ctrl u
+
+	recortar: alt a ( selecionar texto ) ctrl k ( recortar texto selecionado )
+	colar: ctrl u
+
+Ir para o fim do arquivo com nano
+comando: alt /
+
+Ir para o topo do arquivo com nano
+comando: alt \
+
+Ir para determinada linha com nano
+comando: alt g ( digite o número da linha )
+
+Buscar palavras em editor nano
+comando: ctrl w ( digite a palavra ou sentença )
+
+/******************************************************************************************************/
+
+Gerenciamentos de Usuários e Grupos
+
+Listar usuários
+comando: ls ~/home
+
+Criar usuário
+comando: sudo adduser camila
+
+Deletar usuário
+comando: sudo userdel --remove camila
+
+Modificar nomes dos display
+comando: sudo usermod -c 'camila' roberta
+
+Modificar nome do usuário e diretório
+comando: sudo usermod -l roberta -d /home/roberta -m camila
+
+Desabilitar usuário
+comando: sudo usermod -L roberta
+
+Habilitar usuário
+comando: sudo usermod -U roberta
+
+Listar grupos
+comando: getent group
+
+Listar grupo por nome
+comando: groups devs
+
+Criar grupos de usuŕios
+comando: sudo groupadd -g 9999 devs
+
+Deletar grupos de usuários
+comando: sudo groupdel devs
+
+Adicionar usuários a um grupo
+comando: sudo usermod -a -G devs roberta
+
+Remover usuário de um grupo
+comando: sudo gpasswd -d roberta devs
+
+Mudar senha do usuaŕio atual
+comando: passwd
+
+/********************************************************************************************************/
+
+Gerenciamento de Permissões
+
+Possibilidade de alterar 3 propriedades de arquivos e diretórios
+
+Leitura: Se os usuários poderão ler o arquivo (R - read)
+Escrita: Se os usuários poderão escrever no arquivo (W - write)
+Execução: Se os usuários poderão executar o arquivo (X - execute)
+
+1 222 333 444
+
+1: diretório ou arquivo
+222: Permissões do owner (dono)
+333: Permissões do grupo (que o arquivo pertence)
+444: Permissões dos demais usuários (que não são donos do arquivo e também não fazem parte do grupo do arquivo)
+
+Alterar Permissão de Forma Númerica
+comando: chmod xxx file/dir (Onde 'x' representa as permissões em números)
+0: Sem permissão ---
+1: Executar --x
+2: Escrever -w-
+3: Ler e Executar -wx
+4: Ler r--
+5: Ler e executar r-x
+6: Ler e escrever rw
+7: Ler, escrever e executar rwx
+
+Exemplos - modo numérico
+
+chmod 777 arquivo: Todos tem todas as permissões
+chmod 400 arquivo: Só o dono tem permissão de leitura
+chmod 764 arquivo: Dono todas as permissões, grupo pode ler e alterar e demais só ler
+chmod 755 arquivo: Dono todas as permissões, grupo e demais só ler e executar
+chmod 000 arquivo: Ninguém tem mais permissão, apenas com sudo ou root
+chmod 744 arquivo: Dono tem toda as permissões, demais apenas leitura
+
+Alterar Permissões de Modo Simbólico
+comando: chmod args fila/dir (Onde 'args' representado por)
++: Adiciona permissão a um arquivo ou diretório
+-: Remove permissão a um arquivo ou diretório
+=: Determina as permissões, substituindo as anteriores
+u: Dono do arquivo
+g: Grupo
+o: Outros
+a: todos
+
+Exemplos - modo simbólico
+
+chmod o=x: Concedendo permissão de executar para outros
+chmod a=rwx: Concedendo todas as permissões a todos
+chmos g-w: Remover permissão de rescrever para grupos
+chmod u+rw: Concedendo permissão dono do arquivo leitura e escrita
+
+
+
+
+
+
+
+
+
