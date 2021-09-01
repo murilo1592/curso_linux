@@ -1,0 +1,86 @@
+
+Instalando o apache
+
+Atualize seu ambiente linux - sudo apt update
+
+Instalando apache2
+comando: sudo apt install apache2
+
+Visualizar versão do apache
+comando: apache2 -v
+
+Arquivos de configuração do apache
+caminho: /etc/apache2
+
+Configurando o Firewall
+
+listar aplicações disponíveis
+comando: sudo ufw app list
+
+Adiocionar app ao Firewall
+comando: sudo ufw allow in 'Apache Full'
+
+
+Instalar o MYSQL
+comando: sudo apt install mysql-server
+
+Realizar instalação segura de usuário
+comando: sudo mysql_secure_installation
+
+Criando um banco de dados
+
+Conectando no mysql
+comando: sudo mysql -u root
+
+Listar Bancos de Dados
+comando: SHOW DATABASES;
+
+Criar Banco:
+comando: CREATE DATABASE teste;
+
+Criar tabelas:
+comando: 
+	USE teste; 
+	CREATE TABLE users(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(100), age INT, PRIMARY KEY(id);
+	SHOW TABLES;
+	INSERT INTO users(name, age) VALUES('murilo', 29);
+
+Criando um usuário no mysql
+comando: se logar ao sudo mysql -u root
+	criar usuário: CREATE USER 'murilo'@'localhost' IDENTIFIED BY 'murilomattos';
+	conceder permissões: GRANT ALL PRIVILEGES ON * . * TO 'murilo'@'localhost';
+	colocar em prática o usuário criado: FLUSH PRIVILEGES;
+	
+Listar usuários no Mysql
+comando: SELECT User FROM mysql.user;
+Instalando o php
+comando: sudo apt install php libapache2-mod-php php-mysql php-cli
+
+Configurar hierarquia de arquivos lidos pelo apache
+comando:
+	 sudo nano etc/apache2/mods-enable/dir.conf
+ 	 colocar o index.php no começo
+
+Reiniciar serviço do apache
+comando: sudo systemctl restart apache2
+
+Verificar serviço do apache2
+comando: sudo systemctl status apache2
+
+Projetos em php ficam em: /var/www/html/
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
