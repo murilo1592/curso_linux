@@ -1,1 +1,16 @@
+Comando Ping:
+ping 8.8.8.8
+
+Comando netstat ( Estatíticas da Rede - Quais conexões estão abertas em TCP e UDP no linux)
+comando: netstat
+
+Instalando o netstat
+comando: sudo apt install net-tools
+
+Listar conexões TCP
+comando: netstat -at
+
+Listar conexões UDP
+comando: netstat -au
+
 
