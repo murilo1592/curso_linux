@@ -1,0 +1,21 @@
+
+Compactar arquivos em tar
+comando: tar -czvf arquivo_compactado.gz arquivo
+
+Compactar vários arquivos em um só em tar
+comado: tar -czvf compactado2.gz arquivo1.txt arquivo2.txt arquivo.txt documentos/ imagens
+
+Descompactando arquivos tar
+comando: tar -xzvf arquivo_compactado.gz
+
+Descompactar arquivos em determindado diretório tar
+comando: tar -xzvf compactado.gz -C diretorio
+
+Compactar arquivos em zip
+comando: zip -r compacto.zip diretorio
+
+Descompactar aquivos zip
+comando: unzip compacto.zip -d diretorio
+
+Visualizar dentro dos arquivos compactados
+comando: tar -tvf arquivo.tar.gz

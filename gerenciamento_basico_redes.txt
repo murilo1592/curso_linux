@@ -13,4 +13,19 @@ comando: netstat -at
 Listar conexões UDP
 comando: netstat -au
 
+Conectando a um site por porta específica
+comando: netcat -u google.com 80
+
+Comando 'ifconfig' Listar e Atualizar Configurações de Redes no sistema
+comando: ifconfig
+
+Comando: nslookup listar ips através do dns
+comando> nslookup google.com
+
+Comando: tcdpdump ( Listar Conexões TCP p/ nossa máquina )
+
+Listar ip da nossa máquina
+comando: hostname -I
+
+
 
